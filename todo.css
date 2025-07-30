@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-image: url('background.jpg');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.todo-container {
+  background-color: rgb(147, 204, 145);
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.task-complete {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+.task-item {
+  transition: all 0.2s ease;
+}
+
+.task-item:hover {
+  transform: translateY(-2px);
+}
+
+#taskInput:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(15, 45, 94, 0.5);
+}
+
+.delete-btn {
+  transition: all 0.2s ease;
+  opacity: 0;
+}
+
+.task-item:hover .delete-btn {
+  opacity: 1;
+}

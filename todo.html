@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive To-Do List</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="todo.css" />
+</head>
+<body>
+  <div class="todo-container">
+    <div class="text-center mb-8">
+      <h1 class="text-2xl font-bold">To-Do List</h1>
+      <div class="flex rounded-lg shadow-sm overflow-hidden mt-4">
+        <input
+          type="text"
+          id="taskInput"
+          placeholder="Add a new task..."
+          class="flex-grow px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+        />
+        <button
+          id="addBtn"
+          class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 font-medium transition-colors"
+        >
+          Add
+        </button>
+      </div>
+      <p id="errorText" class="text-red-500 mt-2 text-sm hidden"></p>
+    </div>
+
+ 
+    <div class="flex justify-between items-center mb-4 text-sm text-gray-600">
+      <p id="statsText">0 tasks</p>
+      <div>
+        <button id="allBtn" class="mr-2 font-medium text-blue-600">All</button>
+        <button id="activeBtn" class="mr-2 hover:text-blue-600">Active</button>
+        <button id="completedBtn" class="hover:text-blue-600">Completed</button>
+      </div>
+    </div>
+
+    <div id="taskList" class="space-y-3">
+    </div>
+  </div>
+
+  <script src="todo.js"></script>
+</body>
+</html>
+
+
